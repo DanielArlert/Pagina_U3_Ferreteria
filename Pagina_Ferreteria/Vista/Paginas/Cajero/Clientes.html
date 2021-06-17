@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clientes</title>
+    <link href="../../../Modelo/InstalarBootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../../Recursos/css/generales.css" rel="stylesheet">
+</head>
+
+<body id="body-pd">
+    <section>
+        <header class="header bg-dark text-light" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+            <legend class="text-uppercase w-100 text-center">Clientes</legend>
+        </header>
+
+        <div class="l-navbar bg-secondary text-decoration-none" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="Cajero.html" class="nav__link">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">Ventas</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="Clientes.html" class="nav__link active">
+                        <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Clientes</span>
+                        </a>
+
+                        <a href="Productos.html" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Productos</span>
+                        </a>
+                        
+                        <a href="FacturarVenta.html" class="nav__link">
+                            <i class='bx bx-plus nav__icon' ></i>
+                            <span class="nav__name">Agregar Venta</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="../../../index.html" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Salir</span>
+                </a>
+            </nav>
+        </div>
+    </section>
+    
+
+    
+
+    <section>
+        <div class="container-fluid">
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vis-container">
+
+                        <form   class="form-inline justify-content-center mb-2 text-center" action="#" method="GET" >
+                            <div class="form-group col-12">
+                                <label class="form-control-plaintext w-100 text-uppercase">Buscar cliente</label>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control-plaintext w-100 border border bg-light rounded" name="id_cliente"  placeholder="Id del cliente" required>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <input type="submit" value="Buscar" name="submit" class="btn btn-dark w-100 text-uppercase">
+                            </div>
+                        </form>
+
+                        <div class="col-12 table-responsive">
+                            <table class="table table-striped table-hover table-bordered table-sm">
+                                
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Direccion</th>
+                                        <th>Telefono</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Levi Ackerman</td>
+                                        <td>Jacarandas 22 Pátzcuaro</td>
+                                        <td>43412345612</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="vis-container">
+
+                        <form class="form-inline justify-content-center rounded mb-2 text-center bg-white" action="#" method="POST" >
+                            <div class="form-group col-12">
+                                <label class="form-control-plaintext w-100 text-uppercase">Añadir cliente</label>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="nombre_cliente" placeholder="Nombre del cliente" required>
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="apellidop_cliente" placeholder="Apellido parterno del cliente" required>
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="apellidom_cliente" placeholder="Apellido materno del cliente" required>
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="telefono" placeholder="Telefono" required>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="calle" placeholder="Dirección (Calle)" required>
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="numero" placeholder="Dirección (Número)" required>
+                                <input type="text" class="form-control-plaintext w-100 border bg-light mt-1 rounded " name="ciudad" placeholder="Dirección (Ciudad)" required>
+                                <input type="submit" name="accion" class="btn btn-dark w-100 mt-1 text-uppercase" value="Registrar">
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+    
+
+    <section>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="line-chart-container" class="vis-container table-responsive">
+
+                        <table class="table table-striped table-hover table-bordered table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th colspan="4" class="text-uppercase">Listado de clientes</th>
+                                </tr>
+                            </thead>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Direccion</th>
+                                    <th>Telefono</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Levi Ackerman</td>
+                                    <td>Jacarandas 22 Pátzcuaro</td>
+                                    <td>43412345612</td>
+                                </tr>
+                            </tbody>
+        
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <section>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12">
+
+                    <div id="line-chart-container" class="vis-container table-responsive">
+
+                        <form   class="form-inline justify-content-center mb-2 text-center" action="#" method="GET" >
+                            <div class="form-group col-12">
+                                <label class="form-control-plaintext w-100 text-uppercase">Actualizar cliente</label>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control-plaintext w-100 border border bg-light rounded" name="id_cliente"  placeholder="Id del cliente" required>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <input type="submit" value="Buscar" name="submit2" class="btn btn-dark w-100 text-uppercase">
+                            </div>
+                        </form>
+
+                        <hr class="col-10 mt-4 mb-4">      
+                        <form class="form-inline justify-content-center rounded mb-2 text-center" action="#" method="POST" >
+                            <div class="form-group col-4">
+                                <input type="hidden" class="form-control-plaintext border mt-1 w-100 border rounded bg-light" value="1" name="id_cliente" required>
+                                <input type="text" class="form-control-plaintext border mt-1 w-100 border rounded bg-light" value="Levi" name="nombre_cliente" required>
+                                <input type="text" class="form-control-plaintext border mt-1 w-100 border rounded bg-light" value="Ackerman" name="apellidop_cliente" required>
+                                <input type="text" class="form-control-plaintext border mt-1 w-100 border rounded bg-light" value="Ackerman" name="apellidom_cliente" required>
+                                <input type="text" class="form-control-plaintext border mt-1 w-100 border rounded bg-light" value="43412345612" name="telefono" required>
+                            </div>
+                            
+                            <div class="form-group col-4">
+                                <input type="text" class="form-control-plaintext border mt-1 mb-1 w-100 border rounded bg-light" value="Jacarandas" name="calle" required>
+                                <input type="text" class="form-control-plaintext border mt-1 mb-1 w-100 border rounded bg-light" value="22" name="numero" name="correo" required>
+                                <input type="text" class="form-control-plaintext border mt-1 mb-1 w-100 border rounded bg-light" value="Pátzcuaro" name="ciudad" name="correo" required>
+                                <input type="submit" name="accion" class="btn btn-dark w-100 text-uppercase mt-1" value="Actualizar">
+                            </div>
+
+                            <div class="form-group col-4">
+                                <a  class="btn btn-dark w-100 text-uppercase mt-1 mb-1 "  href="#">Eliminar</a>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+
+
+    <script src="../../Recursos/preloader/nav.js"></script>
+    <script src="../../Modelo/InstalarBootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
